@@ -1,0 +1,19 @@
+.btn {
+  background-color: blue;
+  border-radius: 12px;
+  color: aliceblue;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 650px;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 900px;
+}
+
+img {
+  width: 400px;
+}
