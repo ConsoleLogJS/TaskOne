@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import './Carousel.css';
-function Images({ img, alt }) {
+function Images({ content }) {
   const [itemImage, setItemImage] = useState(0);
 
-  console.log(img[itemImage], alt[itemImage]);
+  console.log(content[itemImage].image, content[itemImage].alt);
 
   const nextElementHandler = () => {
-    if (itemImage !== img.length - 1) {
+    if (itemImage !== content.length - 1) {
       setItemImage((prev) => prev + 1);
       console.log('Clicked next');
     } else {
@@ -20,7 +20,7 @@ function Images({ img, alt }) {
       setItemImage((prev) => prev - 1);
       console.log('Clicked back');
     } else {
-      setItemImage(img.length - 1);
+      setItemImage(content.length - 1);
       console.log('Clicked back');
     }
   };
@@ -30,7 +30,7 @@ function Images({ img, alt }) {
       <button className="btn" onClick={backElementHandler}>
         Back
       </button>
-      <img src={img[itemImage]} alt={alt[itemImage]} />
+      <img src={content[itemImage].image} alt={content[itemImage].alt} />
       <button className="btn" onClick={nextElementHandler}>
         Next
       </button>

@@ -1,6 +1,11 @@
+body {
+  background-color: rgb(220, 220, 219);
+}
+
 .btn {
-  background-color: blue;
-  border-radius: 12px;
+  background-color: rgb(82, 82, 255);
+  border-radius: 50%;
+  border-color: white;
   color: aliceblue;
 }
 
